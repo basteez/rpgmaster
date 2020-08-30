@@ -1,0 +1,46 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/rpgmaster-client/dist
+/rpgmaster-client/tmp
+/rpgmaster-client/out-tsc
+# Only exists if Bazel was run
+/rpgmaster-client/bazel-out
+
+# dependencies
+/rpgmaster-client/node_modules
+
+# profiling files
+/rpgmaster-client/chrome-profiler-events*.json
+/rpgmaster-client/speed-measure-plugin*.json
+
+# IDEs and editors
+/rpgmaster-client/.idea
+/rpgmaster-client/.project
+/rpgmaster-client/.classpath
+/rpgmaster-client/.c9/
+/rpgmaster-client/*.launch
+/rpgmaster-client/.settings/
+/rpgmaster-client/*.sublime-workspace
+
+# IDE - VSCode
+/rpgmaster-client/.vscode/*
+/rpgmaster-client/!.vscode/settings.json
+/rpgmaster-client/!.vscode/tasks.json
+/rpgmaster-client/!.vscode/launch.json
+/rpgmaster-client/!.vscode/extensions.json
+/rpgmaster-client/.history/*
+
+# misc
+/rpgmaster-client/.sass-cache
+/rpgmaster-client/connect.lock
+/rpgmaster-client/coverage
+/rpgmaster-client/libpeerconnection.log
+/rpgmaster-client/npm-debug.log
+/rpgmaster-client/yarn-error.log
+/rpgmaster-client/testem.log
+/rpgmaster-client//typings
+
+# System Files
+.DS_Store
+Thumbs.db
