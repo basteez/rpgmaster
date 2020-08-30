@@ -1,0 +1,13 @@
+<div class="row">
+        <div class="col-xs-12 col-md-3"   style="margin-top:50px;" *ngFor="let char of characters">
+            <p-card [header]="[char.characterName]" [subheader]="['Level '+char.level+' '+char.characterClass]"  styleClass="p-card-shadow">
+                <p-header>
+                    <img alt="Card" [src]="char.imagePath" class="img-fluid">
+                </p-header>
+                <ng-template pTemplate="footer">
+                    <p-button label="View" icon="pi pi-search" (click)="viewChar(char.id)"></p-button>
+                    <p-button label="Delete" icon="pi pi-trash" styleClass="p-button-danger" [style]="{'margin-left': '.5em'}" (click)="deleteChar(char)"></p-button>
+                </ng-template>
+            </p-card>
+        </div>
+</div>

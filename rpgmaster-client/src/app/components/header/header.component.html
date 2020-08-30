@@ -1,0 +1,17 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" routerLink="">
+      <span class="pi pi-users"></span>
+      Rpg Master
+    </a>
+    <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup" [ngClass]="{'show': isNavbarVisible}">
+    <div class="navbar-nav">
+        <a *ngIf="authServ.isUserLoggedIn()" class="nav-item nav-link" routerLinkActive="active" routerLink="/characters">Character List <span class="sr-only">(current)</span></a>
+        <a *ngIf="authServ.isUserLoggedIn()" class="nav-item nav-link" routerLinkActive="active" [routerLink]="['character','new']">New Character</a>
+        <a *ngIf="!authServ.isUserLoggedIn()" class="nav-item nav-link" routerLinkActive="active" [routerLink]="['login']">Login</a>
+        <a *ngIf="authServ.isUserLoggedIn()" class="nav-item nav-link" routerLinkActive="active" [routerLink]="['logout']">Logout</a>
+    </div>
+    </div>
+</nav>

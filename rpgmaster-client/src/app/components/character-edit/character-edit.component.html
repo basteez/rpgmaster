@@ -1,0 +1,113 @@
+<div class="row">
+    <div class="col-md-2">
+        <img class="img-fluid" [(src)]="charForm.value.imagePath">
+    </div>
+    <div class="col-xs-12 col-md-10">
+        <form class="form-group" (ngSubmit)="onSubmit()" [formGroup]="charForm">
+            <input type="hidden" name="id" fomControlName="id">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-3 col-xs-12">
+                        <span class="p-float-label">
+                            <input class="form-group-item" id="characterName" type="text" pInputText formControlName="characterName" [ngClass]="{'p-invalid': !charForm.controls.characterName.valid && charForm.controls.characterName.touched}">
+                            <label for="characterName">Character name</label>
+                        </span>
+                        <small *ngIf="!charForm.controls.characterName.valid && charForm.controls.characterName.touched" id="characterName-help" class="p-invalid">Character name is required</small>
+                    </div>
+                    <div class="col-md-9 col-xs-12">
+                        <span class="p-float-label">
+                            <input class="form-group-item" id="imagePath" type="text" pInputText formControlName="imagePath" [ngClass]="{'p-invalid': !charForm.controls.imagePath.valid && charForm.controls.imagePath.touched}">
+                            <label for="imagePath">Image Path</label>
+                        </span>
+                        <small *ngIf="!charForm.controls.imagePath.valid && charForm.controls.imagePath.touched" id="imagePath-help" class="p-invalid">Image URL is required</small>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-3 col-xs-12">
+                        <span class="p-float-label">
+                            <input class="form-group-item" id="characterClass" type="text" pInputText formControlName="characterClass" [ngClass]="{'p-invalid': !charForm.controls.characterClass.valid && charForm.controls.characterClass.touched}">
+                            <label for="class">Class</label>
+                        </span>
+                        <small *ngIf="!charForm.controls.characterClass.valid && charForm.controls.characterClass.touched" id="characterClass-help" class="p-invalid">Class is required</small>
+                    </div>
+                    <div class="col-md-3 col-xs-12">
+                        <span class="p-float-label">
+                            <input class="form-group-item" id="level" type="number" pInputText formControlName="level" [ngClass]="{'p-invalid': !charForm.controls.level.valid && charForm.controls.level.touched}">
+                            <label for="level">Level</label>
+                        </span>
+                        <small *ngIf="!charForm.controls.level.valid && charForm.controls.level.touched" id="level-help" class="p-invalid">Level is required</small>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <span class="p-float-label">
+                    <input class="form-group-item" id="hp" type="number" pInputText formControlName="hp" [ngClass]="{'p-invalid': !charForm.controls.hp.valid && charForm.controls.hp.touched}">
+                    <label for="hp">HP</label>
+                </span>
+                <small *ngIf="!charForm.controls.hp.valid && charForm.controls.hp.touched" id="hp-help" class="p-invalid">HP is required</small>
+            </div>
+            <div class="form-group">
+                <span class="p-float-label">
+                    <input class="form-group-item" id="strength" type="number" pInputText formControlName="strength" [ngClass]="{'p-invalid': !charForm.controls.strength.valid && charForm.controls.strength.touched}">
+                    <label for="level">Strength</label>
+                </span>
+                <small *ngIf="!charForm.controls.strength.valid && charForm.controls.strength.touched" id="strength-help" class="p-invalid">Strength is required</small>
+            </div>
+            <div class="form-group">
+                <span class="p-float-label">
+                    <input class="form-group-item" id="dexterity" type="number" pInputText formControlName="dexterity" [ngClass]="{'p-invalid': !charForm.controls.dexterity.valid && charForm.controls.dexterity.touched}">
+                    <label for="dexterity">Dexterity</label>
+                </span>
+                <small *ngIf="!charForm.controls.dexterity.valid && charForm.controls.dexterity.touched" id="dexterity-help" class="p-invalid">Dexterity is required</small>
+            </div>
+            <div class="form-group">
+                <span class="p-float-label">
+                    <input class="form-group-item" id="constitution" type="number" pInputText formControlName="constitution" [ngClass]="{'p-invalid': !charForm.controls.constitution.valid && charForm.controls.constitution.touched}">
+                    <label for="constitution">Constitution</label>
+                </span>
+                <small *ngIf="!charForm.controls.constitution.valid && charForm.controls.constitution.touched" id="constitution-help" class="p-invalid">Constitution is required</small>
+            </div>
+            <div class="form-group">
+                <span class="p-float-label">
+                    <input class="form-group-item" id="intelligence" type="number" pInputText formControlName="intelligence" [ngClass]="{'p-invalid': !charForm.controls.intelligence.valid && charForm.controls.intelligence.touched}">
+                    <label for="intelligence">Intelligence</label>
+                </span>
+                <small *ngIf="!charForm.controls.intelligence.valid && charForm.controls.intelligence.touched" id="intelligence-help" class="p-invalid">Intelligence is required</small>
+            </div>
+            <div class="form-group">
+                <span class="p-float-label">
+                    <input class="form-group-item" id="wisdom" type="number" pInputText formControlName="wisdom"[ngClass]="{'p-invalid': !charForm.controls.wisdom.valid && charForm.controls.wisdom.touched}">
+                    <label for="wisdom">Wisdom</label>
+                </span>
+                <small *ngIf="!charForm.controls.wisdom.valid && charForm.controls.wisdom.touched" id="wisdom-help" class="p-invalid">Wisdom is required</small>
+            </div>
+            <div class="form-group">
+                <span class="p-float-label">
+                    <input class="form-group-item" id="charisma" type="number" pInputText formControlName="charisma"[ngClass]="{'p-invalid': !charForm.controls.charisma.valid && charForm.controls.charisma.touched}">
+                    <label for="charisma">Charisma</label>
+                </span>
+                <small *ngIf="!charForm.controls.charisma.valid && charForm.controls.charisma.touched" id="charisma-help" class="p-invalid">Charisma is required</small>
+            </div>
+            <div class="form-group">
+                <span class="p-buttonset">
+                    <button
+                        pButton
+                        pRipple
+                        [label]="isEditMode?'Save':'Edit'"  
+                        [icon]="isEditMode? 'pi pi-check':'pi pi-pencil'"
+                        [disabled]="toggleSaveButton()" 
+                        type="submit"></button>
+                    <button 
+                        pButton
+                        pRipple
+                        class="p-button-secondary" 
+                        label="Cancel" 
+                        icon="pi pi-times"
+                        (click)="returnToList()"></button>
+                </span>
+            </div>
+        </form>
+    </div>
+</div>
