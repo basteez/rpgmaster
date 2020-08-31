@@ -7,6 +7,14 @@ Backend is made with [**Spring Boot**](http://start.spring.io).
 
 Frontend uses [**Angular 10**](http://angular.io), [**Bootstrap 4**](https://getbootstrap.com/) for the CSS grid and [**PrimeNG**](https://primefaces.org/primeng) for the UI components
 
+## Running the backend
+`mvn spring-boot:run`
+
+## Running the frontend on docker
+`docker-compose up --build`
+
+
+
 ## Captures
 ### Login Page
 ![login](https://i.imgur.com/7Zf2Tlu.gif)
