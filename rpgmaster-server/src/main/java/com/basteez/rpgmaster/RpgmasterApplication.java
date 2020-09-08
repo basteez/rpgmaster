@@ -16,7 +16,7 @@ public class RpgmasterApplication {
 		SpringApplication.run(RpgmasterApplication.class, args);
 	}
 
-	@Bean
+	/*@Bean
 	CommandLineRunner init(RpgCharacterRepository repo){
 		return args -> {
 			Stream.of(
@@ -33,6 +33,6 @@ public class RpgmasterApplication {
 			});
 			repo.findAll().forEach(System.out::println);
 		};
-	}
+	}*/
 
 }
