@@ -13,11 +13,12 @@ import { CharacterEditComponent } from './components/character-edit/character-ed
 import {CardModule} from 'primeng/card';
 import {ButtonModule} from 'primeng/button';
 import {InputTextModule} from 'primeng/inputtext';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
 import {MessagesModule} from 'primeng/messages';
 import {MessageModule} from 'primeng/message';
 import { LogoutComponent } from './components/logout/logout.component';
+import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -26,13 +27,15 @@ import { LogoutComponent } from './components/logout/logout.component';
     CharactersListComponent,
     CharacterEditComponent,
     LoginComponent,
-    LogoutComponent
+    LogoutComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    FormsModule,
     BrowserAnimationsModule,
     //primeng
     CardModule,

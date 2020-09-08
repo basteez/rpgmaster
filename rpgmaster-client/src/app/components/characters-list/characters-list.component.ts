@@ -13,6 +13,7 @@ import { Router } from '@angular/router';
 export class CharactersListComponent implements OnInit, OnDestroy {
   characters: Character[] = [];
   charSub: Subscription;
+  filteredName:string;
 
   constructor(private charService: CharactersService, private router: Router) { }
 
